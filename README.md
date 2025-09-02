@@ -37,7 +37,7 @@ lista-de-compras/
 │ ├─ models/
 │ │ └─ Produto.ts # Modelo do produto no MongoDB
 │ └─ routes/
-│ └─ produtoRoutes.ts # Rotas CRUD
+│   └─ produtoRoutes.ts # Rotas CRUD
 │
 ├─ public/
 │ ├─ index.html # Front-end
