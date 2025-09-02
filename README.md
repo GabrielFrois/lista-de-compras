@@ -8,6 +8,14 @@ O projeto foi desenvolvido como atividade da disciplina **Desenvolvimento Web II
 
 ---
 
+## Funcionalidades
+
+- Adicionar produtos com nome e valor.
+- Editar produtos existentes.
+- Excluir produtos da lista.
+
+---
+
 ## Tecnologias Utilizadas
 - **Node.js**: Ambiente de execução para JavaScript no servidor.
 - **TypeScript**: Superconjunto de JavaScript com tipagem estática.
@@ -48,6 +56,8 @@ lista-de-compras/
 Crie a pasta do projeto e execute os seguintes comandos:
 
 ```bash
+git clone https://github.com/GabrielFrois/lista-de-compras.git
+cd lista-de-compras
 npm init -y
 ```
 
@@ -73,13 +83,13 @@ npx tsc --init
 Você pode usar o **MongoDB Compass** ou **MongoDB Atlas** para criar o banco de dados.  
 
 Sugestão de configuração local:  
-- Nome do banco de dados: `lista-de-compras`
-- Nome da coleção: `Lista de Compras`
+- Nome do banco de dados: `shopping-list`
+- Nome da coleção: `shoppingitems`
 
 No `arquivo src/index.ts`, a conexão está definida assim:
 
 ```typescript
-mongoose.connect("mongodb://127.0.0.1:27017/lista-de-compras")
+mongoose.connect("mongodb://127.0.0.1:27017/shopping-list")
 ```
 
 ### 3. Estrutura das Rotas
@@ -102,14 +112,6 @@ http://localhost:3000
 ```
 
 Abra o navegador e acesse o frontend pelo mesmo endereço.
-
----
-
-## Funcionalidades
-
-- Adicionar produtos com nome e valor.
-- Editar produtos existentes.
-- Excluir produtos da lista.
 
 ---
 
