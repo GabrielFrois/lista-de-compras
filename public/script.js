@@ -4,6 +4,7 @@ const API_URL = "http://localhost:3000/lista";
 document.addEventListener("DOMContentLoaded", carregarProdutos);
 
 const form = document.getElementById("form-produto");
+const submitButton = form.querySelector("button");
 form.addEventListener("submit", salvarProduto);
 
 // Buscar e exibir produtos
@@ -18,11 +19,10 @@ async function carregarProdutos() {
         const tr = document.createElement("tr");
 
         tr.innerHTML = `
-            <td>${produto.produto}</td>
-            <td>R$${produto.valor.toFixed(2)}</td>
-            <td>
-                <button onClick="editarProduto('${produto._id}', '${produto.produto}', '${produto.valor}')">Editar</button>
-                <button onClick="excluirProduto('${produto._id}')">Excluir</button>
+            <td>${produto.produto} - R$${produto.valor.toFixed(2)}</td>
+            <td class="acoes">
+                <button onClick="editarProduto('${produto._id}', '${produto.produto}', '${produto.valor}')" class="btn-editar">Editar</button>
+                <button onClick="excluirProduto('${produto._id}')" class="btn-excluir">Excluir</button>
             </td>
         `;
         lista.appendChild(tr);
@@ -37,6 +37,7 @@ async function salvarProduto(e) {
     const produto = document.getElementById("produto").value;
 
     let valorInput = document.getElementById("valor").value;
+
     valorInput = valorInput.replace(",", ".");
     const valor = parseFloat(valorInput);
 
@@ -67,6 +68,7 @@ function editarProduto(id, produto, valor) {
     document.getElementById("produto-id").value = id; 
     document.getElementById("produto").value = produto;
     document.getElementById("valor").value = valor;
+    submitButton.textContent = "Atualizar Produto";
 }
 
 // Excluir produto

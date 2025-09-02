@@ -8,23 +8,18 @@
 <body>
     <h1>Lista de Compras</h1>
 
-    <form id="form-produto">
-        <input type="hidden" id="produto-id">
-        <input type="text" id="produto" placeholder="Nome do produto" required>
-        <input type="number" id="valor" placeholder="Valor do produto" step="0.01" required>
-        <button type="submit">Adicionar Produto</button>
-    </form>
+    <div class="container">
+        <form id="form-produto">
+            <input type="hidden" id="produto-id">
+            <input type="text" id="produto" placeholder="Nome do produto" required>
+            <input type="number" id="valor" placeholder="Valor do produto" step="0.01" required>
+            <button type="submit">Adicionar Produto</button>
+        </form>
 
-    <h2>Lista de Compras</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Valor</th>
-            </tr>
-        </thead>
-        <tbody id="produtos-lista"></tbody>
-    </table>
+        <table>
+            <tbody id="produtos-lista"></tbody>
+        </table>
+    </div>
 
     <script src="script.js"></script>
 </body>

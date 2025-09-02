@@ -1,28 +1,131 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background: #e0e0e0;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 form {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
 }
 
 input {
-    margin: 5px;
-    padding: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+form input, form button {
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 12px;
 }
 
 button {
-    margin: 5px;
-    padding: 5px 10px;
+    padding: 5px 14px;
     cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+form button {
+    background: #4caf50;
+    color: #fff;
+    min-width: 160px;
+    text-align: center;
+}
+
+form button:hover{
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+tr {
+    background: #e9e9e9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.1s;
+    
+}
+
+td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+td button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+td.acoes {
+    text-align: right;
+}
+
+tr td:first-child{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+tr td:last-child{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.btn-editar {
+    background: #50adb9;
+    color: #fff;
+}
+
+.btn-editar:hover {
+    background: #4798a3;
+    transform: scale(1.05);
+  }
+
+.btn-excluir {
+    background: #c53a30;
+    color: #fff;
+}
+
+.btn-excluir:hover {
+    background: #af332a;
+    transform: scale(1.05);
+  }
+
+.container {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    
 }
