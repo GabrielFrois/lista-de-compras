@@ -13,4 +13,4 @@ const ProdutoSchema:Schema = new Schema({
 });
 
 // Exportando o modelo para ser usado no CRUD
-export default mongoose.model<IProduto>("Lista de Compras", ProdutoSchema);
+export default mongoose.model<IProduto>("shoppingitems", ProdutoSchema);

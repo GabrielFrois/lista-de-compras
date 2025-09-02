@@ -60,6 +60,8 @@ async function salvarProduto(e) {
     }
 
     form.reset();
+    document.getElementById("produto-id").value ="";
+    submitButton.textContent = "Adicionar Produto";
     carregarProdutos();
 }
 

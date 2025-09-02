@@ -57,7 +57,7 @@ form button {
 
 form button:hover{
     background-color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 table {
